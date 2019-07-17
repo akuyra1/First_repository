@@ -49,6 +49,16 @@
 // }
 // isEven(4)
 
-var variableABC = "A B C"; 
-variableABC = variableABC.replace('B', 'D')
+// var variableABC = "A B C"; 
+// variableABC = variableABC.replace('B', 'D');
 
+//  var colors = ["blue", "white", "grey", "violet"];
+
+//  var deletedColoursArr = [];
+
+//  colors.unshift("yellow", "black", "orange");
+//  colors.push("teal", "leblanc")
+ 
+//  deletedColoursArr = colors.pop();
+
+ 
