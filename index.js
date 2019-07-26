@@ -61,4 +61,25 @@
  
 //  deletedColoursArr = colors.pop();
 
- 
+// // FOR LOOPS IN AN ARRAY! -----------------------
+//  var friends = ["Sam", "Rob", "Alantas", "Mindaugas"];
+//  for(var x = 0; x < friends.length; x++){
+//      alert(friends[x])
+//  };
+
+var friends = ["Sae", "Bob", "Dude", "Helena", "Owen", "Heizel"];
+for(x = 0; x < friends.length; x++) {
+    console.log("Friend " + x + ": " +  friends[x]);
+    if(x === friends.length - 1) {
+        console.log("You have no more friends!");
+    }
+};
+
+var button1 = document.querySelector("#testButton"); 
+button1.style.border = "solid 2px white";
+
+var urlName = document.getElementById("urlTest");
+urlName.textContent = "This is a text written from JavaScript"
+urlName.style.color = "white"
+urlName.style.font = "bold"
+urlName.style.fontSize = "2em"

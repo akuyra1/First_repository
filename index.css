@@ -1,3 +1,15 @@
 body {
-    background-color: aqua;
+    background-color: green;
+}
+
+button {
+    background-color: black;
+    color:white;
+    border: .1em solid white;
+    font: bold;
+    font-size: 2em;
+}
+
+#testButton {
+    color: red;
 }
