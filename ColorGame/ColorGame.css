@@ -1,0 +1,25 @@
+body {
+    background-color: grey;
+}
+
+#container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.square {
+    background-color: rgb(84, 50, 148);
+    width: 30%;
+    padding-bottom: 30%;
+    margin: 1.66%;
+    float: left;
+    
+}
+
+#colorDisplay {
+    text-transform: uppercase;
+    color: white;
+}
+
+span {
+    color: white;
+}
