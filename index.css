@@ -1,15 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif
+}
+
 body {
-    background-color: green;
+    background-color: f4f4f4;
+    
 }
 
-button {
-    background-color: black;
-    color:white;
-    border: .1em solid white;
-    font: bold;
-    font-size: 2em;
+#container {
+    border: 1px solid rgb(163, 163, 163);
+    width: 24em;
+    padding-left: 3em;
+    margin: 4em 4em;
+    padding: 1em 0 1.5em 4em; 
+    background-color: rgb(183, 219, 252);
+    border-radius: 5em;
+    
+}
+#MainHead {
+    margin-bottom: .5em;
+    padding: 1em;
+    width: 100%;
+    background-color: rgb(38, 133, 189);
+    color: rgb(252, 252, 252);
+    border-bottom: .1em solid black;
 }
 
-#testButton {
-    color: red;
+#FormHeader {
+    padding: .5em;
+}
+
+.formText {
+    padding-top: .5em;
+    margin-left: .5em;
+}
+
+.inputField {
+    padding-bottom: .5em;
+    margin-left: .5em;
+    width: 15%;
+    border: .1em solid black;
+    min-width: 275px;
+    padding: .5rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+    outline: none;
+}
+
+.Btn1 {
+    border-radius: 2em;
+    width: 15%;
+    margin: 1em 0 .5em 2em;
+    padding: 1em;
+    border: .15em solid black;
+    background-color: rgb(2, 104, 163);
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    min-width: 15em;
+    letter-spacing: .2em;
+
+}
+.Btn1:hover {
+    transition: ease-in-out 2s;
+    background-color: darkblue;
+    border: .15em solid white;
 }
