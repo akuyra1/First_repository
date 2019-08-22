@@ -1,8 +1,8 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: 100;
+    font-family: Arial, Helvetica, sans-serif;
 
 }
 
@@ -22,14 +22,13 @@ h1 {
 
 #buttonLine {
     background-color: white;
-    text-align: center;
     height: 30px;
-    margin-bottom: 1em;
     border-bottom: 1px solid rgb(50, 124, 194);
 }
 #container {
     max-width: 600px;
     margin: 0 auto;
+    padding-top: 2em;
 }
 .square {
     background-color: rgb(84, 50, 148);
@@ -47,12 +46,20 @@ h1 {
 
 span {
     color: black;
+    font-weight: bold;
     font-size: 1.5em;
+    
 }
-
-.resetBtn {
-  display: none;
-  float: left;  
+.btn {
+    font-size: 1em;
+    padding: .24em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+.btn_1 {
+  display: inline-block;
+  align-items: center;
+  
 }
 
 #btnRight {
@@ -60,7 +67,7 @@ span {
 }
 
 #message {    
-    font-size: 1.1em;
-    padding-left: 15%;
+    font-size: 1.2em;
+    margin-left:40%;
     
 }

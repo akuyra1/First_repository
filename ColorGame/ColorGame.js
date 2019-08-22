@@ -4,30 +4,32 @@ var pickedColor = winningColor();
 var colorDisplay = document.getElementById("colorDisplay");
 var messageDisplay = document.querySelector("#message");
 var h1 = document.querySelector("h1");
-var btn_1 = document.querySelector(".resetBtn");
-
-
+var playAgain = document.querySelector(".btn_1");
 colorDisplay.textContent = pickedColor;
+newGame();
 
-for(var i = 0; i < squares.length; i++) {
-    //Add initial colors to squares
-    squares[i].style.backgroundColor = colors[i]
-    //Add click listeners to squares
-    squares[i].addEventListener("click", function(){
-        //Grap color of clicked square
-        var clickedColor = this.style.backgroundColor;
-        //Compare clicked color to pickedColor
-        if(clickedColor === pickedColor) {
-            messageDisplay.textContent = "Correct!";
-            changeColors(pickedColor);
-            h1.style.backgroundColor = pickedColor;
-            btn_1.style.display = "unset";
-        } else {
-            this.style.backgroundColor = "rgb(97, 94, 94)";
-            messageDisplay.textContent = "Try again";
-        }
-    });
-};
+function newGame(){
+    for(var i = 0; i < squares.length; i++) {
+        //Add initial colors to squares
+        squares[i].style.backgroundColor = colors[i]
+        //Add click listeners to squares
+        squares[i].addEventListener("click", function(){
+            //Grap color of clicked square
+            var clickedColor = this.style.backgroundColor;
+            //Compare clicked color to pickedColor
+            if(clickedColor === pickedColor) {
+                messageDisplay.textContent = "Correct!";
+                messageDisplay.style.color = pickedColor;
+                changeColors(pickedColor);
+                h1.style.backgroundColor = pickedColor;
+                playAgain.style.display = "unset";
+            } else {
+                this.style.backgroundColor = "rgb(97, 94, 94)";
+                messageDisplay.textContent = "Try again";
+            }
+        });
+    };
+}
 
 function changeColors(color) {
     //loop through all squares
@@ -65,4 +67,7 @@ function winningColor() {
     var random = Math.floor(Math.random() * 6);
     return colors[random];
 }   
-
+//Random practice code for document.write
+// for (var i = 0; i < 10; i++) {
+//     document.write(i + ": " + i*3 + "<br />");
+// }

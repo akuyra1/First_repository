@@ -1,0 +1,47 @@
+* {
+    margin: 1em 0 0 0;
+    padding: 0;
+    background: lightgray;
+    
+}
+h1 {
+    text-align: center;
+    margin: 1em;
+    padding: 1em;
+    background: olive;
+    
+}
+@media(max-width:800px){
+   .container-1{
+        display:flex;
+        flex-direction: column;
+        font-size: 1.2em;
+   }
+}
+.container-1 {
+    display: flex;
+    background: green;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+.boxes {
+    background: grey;
+    margin: 10px;
+    
+}
+
+.box-1 {
+    background: coral;
+}
+
+.box-2 {
+    background: navy;
+    color: white;
+}
+
+.box-3 {
+    background: brown;
+}
