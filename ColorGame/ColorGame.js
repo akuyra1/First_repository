@@ -5,8 +5,32 @@ var colorDisplay = document.getElementById("colorDisplay");
 var messageDisplay = document.querySelector("#message");
 var h1 = document.querySelector("h1");
 var playAgain = document.querySelector(".btn_1");
+var easyGame = document.querySelector("#easy");
+var hardGame = document.querySelector("#hard");
 colorDisplay.textContent = pickedColor;
 newGame();
+
+
+// if(
+//     easyGame.addEventListener("click", function() {
+//         colors = generateRandomColors(2)
+//         pickedColor = winningColor();
+//         colorDisplay.textContent = pickedColor;
+//         newGame();
+//     })
+// )
+
+
+playAgain.addEventListener("click", function() {
+    //generate all new colors
+    colors = generateRandomColors(6);
+    //pick new random color from array
+    pickedColor = winningColor();
+    //change picked color message
+    colorDisplay.textContent = pickedColor;
+    //change colors of squares
+    newGame()
+})
 
 function newGame(){
     for(var i = 0; i < squares.length; i++) {
