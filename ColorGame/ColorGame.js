@@ -8,30 +8,33 @@ var playAgain = document.querySelector(".btn_1");
 var easyGame = document.querySelector("#easy");
 var hardGame = document.querySelector("#hard");
 colorDisplay.textContent = pickedColor;
+playAgain.textContent = "New Game"
 newGame();
 
 
-// if(
-//     easyGame.addEventListener("click", function() {
-//         colors = generateRandomColors(2)
-//         pickedColor = winningColor();
-//         colorDisplay.textContent = pickedColor;
-//         newGame();
-//     })
-// )
 
+// ----------------------Play again button code -------------------
 
 playAgain.addEventListener("click", function() {
+    //Change button name to "New game"
+    playAgain.textContent = "New Game";
     //generate all new colors
     colors = generateRandomColors(6);
     //pick new random color from array
     pickedColor = winningColor();
     //change picked color message
     colorDisplay.textContent = pickedColor;
+    //change h1 background color back to default (css)
+    h1.style.background =  "rgb(50, 124, 194)";
+    messageDisplay.style.color = "black";
+    //change / remove "correct!" message
+    messageDisplay.textContent = "";
     //change colors of squares
     newGame()
 })
+// ----------------------Play again button code END -------------------
 
+//-----------------------MAIN CODE ------------------------------------
 function newGame(){
     for(var i = 0; i < squares.length; i++) {
         //Add initial colors to squares
@@ -41,9 +44,10 @@ function newGame(){
             //Grap color of clicked square
             var clickedColor = this.style.backgroundColor;
             //Compare clicked color to pickedColor
-            if(clickedColor === pickedColor) {
+            if(clickedColor === pickedColor) {               
                 messageDisplay.textContent = "Correct!";
                 messageDisplay.style.color = pickedColor;
+                playAgain.textContent = "Play Again?";
                 changeColors(pickedColor);
                 h1.style.backgroundColor = pickedColor;
                 playAgain.style.display = "unset";
@@ -91,7 +95,5 @@ function winningColor() {
     var random = Math.floor(Math.random() * 6);
     return colors[random];
 }   
-//Random practice code for document.write
-// for (var i = 0; i < 10; i++) {
-//     document.write(i + ": " + i*3 + "<br />");
-// }
+
+

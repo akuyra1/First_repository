@@ -36,9 +36,11 @@ h1 {
     padding-bottom: 30%;
     margin: 1.66%;
     float: left;
-    border-radius: 20%;    
+    border-radius: 20%;  
 }
-
+.square, h1, #message {
+    transition: .5s;
+}
 #colorDisplay {
     text-transform: uppercase;
     color: white;
@@ -70,4 +72,10 @@ span {
     font-size: 1.2em;
     margin-left:40%;
     
+}
+
+.btn_other{
+    border: none;
+    height: 1.9em;
+    margin-left: .55em;
 }
