@@ -15,6 +15,12 @@ var playAgain = document.querySelector(".btn_1");
 var easyGame = document.querySelector("#easy");
 var hardGame = document.querySelector("#hard");
 
+easyGame.addEventListener("click", function(){
+    alert("This button is not ready yet!")
+})
+hardGame.addEventListener("click", function(){
+    alert("This button is not ready yet!")
+})
 
 colorDisplay.textContent = pickedColor;
 
