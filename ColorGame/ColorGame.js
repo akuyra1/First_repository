@@ -1,3 +1,10 @@
+/*==============TASKS THAT STILL NEED TO BE DONE===============
+1) Create function for Easy / Hard buttons active status.
+2) Create a counter for guessing attempts (3 for example and then game over alert)
+3) Final cosmetic changes.
+
+*/
+
 var colors = generateRandomColors(6);
 var squares = document.querySelectorAll(".square");
 var pickedColor = winningColor();
@@ -17,21 +24,6 @@ playAgain.textContent = "New Game"
 newGame();
 
 //-----------------------easyGame / hardGame: buttons styles----------
-// hardGame.style.background = "rgb(50, 124, 194)";
-// hardGame.style.color = "white";
-// hardGame.style.border = "1px solid rgb(50, 124, 194)";
-
-function toggle_class() {
-    //Toggle selected game difficulty on/off
-    //if loop to determine the active class
-
-    //toggle easyGame ON
-    easyGame.classList.toggle("active");
-
-    //toggle hardGame ON
-    hardGame.classList.toggle("active");
-
-};
 
 // ----------------------Play again button code -------------------
 
