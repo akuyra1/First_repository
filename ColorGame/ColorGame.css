@@ -5,14 +5,9 @@
     font-family: Arial, Helvetica, sans-serif;
 
 }
-.active {
-    background-color: red;
-    color: yellow;
-    font-size: 3em;
-    
-}
+
 body {
-    background-color: rgb(97, 94, 94);
+    background-color: #232323;
     color: white;
 }
 
@@ -27,8 +22,9 @@ h1 {
 
 #buttonLine {
     background-color: white;
-    height: 30px;
-    border-bottom: 1px solid rgb(50, 124, 194);
+    padding: .481em;
+    /* maybe add a border-bottom with some shadows under it for cool effect? */
+ 
 }
 #container {
     max-width: 600px;
@@ -36,7 +32,7 @@ h1 {
     padding-top: 2em;
 }
 .square {
-    background-color: rgb(84, 50, 148);
+    background-color: #232323;
     width: 30%;
     padding-bottom: 30%;
     margin: 1.66%;
@@ -44,45 +40,42 @@ h1 {
     border-radius: 20%;  
 }
 .square, h1, #message {
-    transition: .5s;
+    transition: .6s;
 }
 #colorDisplay {
     text-transform: uppercase;
     color: white;
 }
 
-span {
-    color: black;
+.btn {
+    font-size: 1.243em;
+    text-decoration: none;
+    padding: .4em;
+    color: rgb(50, 124, 194);
+    text-transform: uppercase;
     font-weight: bold;
-    font-size: 1.5em;
     
 }
-.btn {
-    font-size: 1em;
-    padding: .24em;
-    padding-left: 1em;
-    padding-right: 1em;
-}
-.btn_1 {
-  display: inline-block;
-  align-items: center;
-  
-}
-
 #btnRight {
     float: right;
 }
 
 #message {    
     font-size: 1.2em;
-    margin-left:40%;
+    margin-left:37.5%;
+    font-weight: bold;
+    color: rgb(50, 124, 194);
+    text-transform: uppercase;
+
     
 }
-
-.btn_other{
-    border: none;
-    height: 1.9em;
-    margin-left: .55em;
-    
+.new_game:hover {
+    transition: .5s;
+    background: rgb(50, 124, 194);
+    color: white;
 }
 
+.active {
+    background-color: rgb(50, 124, 194);
+    color: white;    
+}

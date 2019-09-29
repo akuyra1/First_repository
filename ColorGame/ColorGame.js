@@ -14,12 +14,19 @@ var h1 = document.querySelector("h1");
 var playAgain = document.querySelector(".btn_1");
 var easyGame = document.querySelector("#easy");
 var hardGame = document.querySelector("#hard");
+var transitionButton = document.querySelector(".new_game");
+var activeClass = document.querySelector(".active");
 
+//toggle a class of "active" to indicate which game difficulty.
 easyGame.addEventListener("click", function(){
-    alert("This button is not ready yet!")
+    //Add class on easyGame and remove it from hardGame
+    easyGame.classList.add("active");
+    hardGame.classList.remove("active");
 })
 hardGame.addEventListener("click", function(){
-    alert("This button is not ready yet!")
+    //Add class on hardGame and remove it from easyGame
+    hardGame.classList.add("active");
+    easyGame.classList.remove("active");
 })
 
 colorDisplay.textContent = pickedColor;
@@ -30,6 +37,8 @@ playAgain.textContent = "New Game"
 newGame();
 
 //-----------------------easyGame / hardGame: buttons styles----------
+
+
 
 // ----------------------Play again button code -------------------
 
@@ -65,13 +74,15 @@ function newGame(){
             if(clickedColor === pickedColor) {               
                 messageDisplay.textContent = "Correct!";
                 messageDisplay.style.color = pickedColor;
-                playAgain.textContent = "Play Again?";
+                playAgain.textContent = "Play Again";
                 changeColors(pickedColor);
                 h1.style.backgroundColor = pickedColor;
-                playAgain.style.display = "unset";
+               
+                
             } else {
-                this.style.backgroundColor = "rgb(97, 94, 94)";
+                this.style.backgroundColor = "#232323";
                 messageDisplay.textContent = "Try again";
+                messageDisplay.style.color = "rgb(50, 124, 194)";
             }
         });
     };
