@@ -2,10 +2,10 @@
 1) Create function for Easy / Hard buttons active status.
 2) Create a counter for guessing attempts (3 for example and then game over alert)
 3) Final cosmetic changes.
-
 */
 
-var colors = generateRandomColors(6);
+var numberOfSquares = 6;
+var colors = generateRandomColors(numberOfSquares);
 var squares = document.querySelectorAll(".square");
 var pickedColor = winningColor();
 var colorDisplay = document.getElementById("colorDisplay");
@@ -17,30 +17,46 @@ var hardGame = document.querySelector("#hard");
 var transitionButton = document.querySelector(".new_game");
 var activeClass = document.querySelector(".active");
 
+//button renamed to New Game if the game has not been won yet
+playAgain.textContent = "New Game"
+newGame();
+colorDisplay.textContent = pickedColor;
+
+
 //toggle a class of "active" to indicate which game difficulty.
 easyGame.addEventListener("click", function(){
+    numberOfSquares = 3;
     //Add class on easyGame and remove it from hardGame
     easyGame.classList.add("active");
     hardGame.classList.remove("active");
-})
+    colors = generateRandomColors(numberOfSquares);
+    pickedColor = winningColor();
+    colorDisplay.textContent = pickedColor;
+    h1.style.background = "rgb(50, 124, 194)";
+    messageDisplay.textContent = " ";
+        for(var i = 0; i < squares.length; i++) {
+        if(colors[i]){
+            squares[i].style.background = colors[i];
+        } else {
+            squares[i].style.display = "none";
+        }
+    }   
+});
+
 hardGame.addEventListener("click", function(){
     //Add class on hardGame and remove it from easyGame
     hardGame.classList.add("active");
     easyGame.classList.remove("active");
+    colors = generateRandomColors(6);
+    pickedColor = winningColor();
+    colorDisplay.textContent = pickedColor;
+    h1.style.background = "rgb(50, 124, 194)";
+    messageDisplay.textContent = " ";
+    for(var i = 0; i < squares.length; i++) {
+            squares[i].style.background = colors[i];
+            squares[i].style.display = "block";        
+    } 
 })
-
-colorDisplay.textContent = pickedColor;
-
-//button renamed to New Game if the game has not been won yet
-playAgain.textContent = "New Game"
-
-newGame();
-
-//-----------------------easyGame / hardGame: buttons styles----------
-
-
-
-// ----------------------Play again button code -------------------
 
 playAgain.addEventListener("click", function() {
     //Change button name to "New game"
@@ -76,9 +92,7 @@ function newGame(){
                 messageDisplay.style.color = pickedColor;
                 playAgain.textContent = "Play Again";
                 changeColors(pickedColor);
-                h1.style.backgroundColor = pickedColor;
-               
-                
+                h1.style.backgroundColor = pickedColor;                
             } else {
                 this.style.backgroundColor = "#232323";
                 messageDisplay.textContent = "Try again";
@@ -101,10 +115,10 @@ function generateRandomColors(num) {
     //make array
     var arr = [];
     //add num random colors to array
-    for(var i = 0; i <= num; i++){
+    for(var i = 0; i < num; i++){
         //get random color and push into arr
         arr.push(randomColor())
-    };
+    }; 
     //return that array
     return arr;
 };
@@ -121,8 +135,6 @@ function randomColor() {
 };
 
 function winningColor() {
-    var random = Math.floor(Math.random() * 6);
+    var random = Math.floor(Math.random() * numberOfSquares)
     return colors[random];
-}   
-
-
+}  

@@ -45,6 +45,7 @@ h1 {
 #colorDisplay {
     text-transform: uppercase;
     color: white;
+    
 }
 
 .btn {
@@ -65,9 +66,7 @@ h1 {
     margin-left:37.5%;
     font-weight: bold;
     color: rgb(50, 124, 194);
-    text-transform: uppercase;
-
-    
+    text-transform: uppercase;    
 }
 .new_game:hover {
     transition: .5s;
@@ -79,3 +78,24 @@ h1 {
     background-color: rgb(50, 124, 194);
     color: white;    
 }
+
+@media only screen and (min-width: 100px) {
+    #message {
+        margin-left: 10%;
+    }
+  }
+  @media only screen and (min-width: 600px) {
+    #message {
+        margin-left: 20%;
+    }
+  }
+  @media only screen and (min-width: 700px) {
+    #message {
+        margin-left: 25%;
+    }
+  }
+  @media only screen and (min-width: 1000px) {
+    #message {
+        margin-left: 37.5%;
+    }
+  }
